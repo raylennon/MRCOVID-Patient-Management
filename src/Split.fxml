@@ -27,7 +27,7 @@
             </ImageView>
         </AnchorPane>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-            <SplitPane centerShape="false" dividerPositions="0.2" layoutX="-5.0" layoutY="-4.0" prefHeight="903.0" prefWidth="1234.0" style="-fx-padding: 1 0 1 0;">
+            <SplitPane centerShape="false" dividerPositions="0.1766612641815235" layoutX="-5.0" layoutY="-4.0" prefHeight="903.0" prefWidth="1234.0" style="-fx-padding: 1 0 1 0;">
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="307.0" style="-fx-background-color: #a1a1a1;">
                     <Button fx:id="button1" layoutX="44.0" layoutY="82.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: transparent;" text="Provider Information" />
                     <Button fx:id="button2" layoutX="44.0" layoutY="165.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: transparent;" text="New Patient" />
@@ -43,11 +43,6 @@
                                 <Font size="43.0" />
                             </font>
                         </Label>
-                  <ImageView fitHeight="128.0" fitWidth="131.0" layoutX="289.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Resources/Heart.png" />
-                     </image>
-                  </ImageView>
                     </AnchorPane>
                     <AnchorPane fx:id="pane1" prefHeight="200.0" prefWidth="200.0" visible="false">
                         <Label layoutX="279.0" layoutY="324.0" text="Provider Information :)">

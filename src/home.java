@@ -26,12 +26,6 @@ public class home extends Application {
             primaryStage.setScene(scene);
             primaryStage.setResizable(false);
 
-            Image image = new Image("flower.png");
-
-            // simple displays ImageView the image as is
-            ImageView iv1 = new ImageView();
-            iv1.setImage(image);
-
 
             primaryStage.show();
         } catch (Exception e) {
