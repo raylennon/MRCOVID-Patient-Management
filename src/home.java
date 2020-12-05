@@ -6,6 +6,7 @@ import javafx.stage.Stage;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 public class home extends Application {
 
@@ -24,6 +25,14 @@ public class home extends Application {
             Scene scene = new Scene(root, 1000, 600);
             primaryStage.setScene(scene);
             primaryStage.setResizable(false);
+
+            Image image = new Image("flower.png");
+
+            // simple displays ImageView the image as is
+            ImageView iv1 = new ImageView();
+            iv1.setImage(image);
+
+
             primaryStage.show();
         } catch (Exception e) {
             LOGGER.log(Level.WARNING,e.getMessage());

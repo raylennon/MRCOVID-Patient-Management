@@ -6,20 +6,7 @@ import javafx.scene.layout.AnchorPane;
 public class ViewController {
 
     @FXML
-    private Button button1 ;
-
-    @FXML
-    private Button button2 ;
-
-    @FXML
-    private Button button3 ;
-
-    @FXML
-    private Button button4 ;
-
-    @FXML
-    private Button button5 ;
-
+    private AnchorPane homepane;
     @FXML
     private AnchorPane pane1;
     @FXML
@@ -35,10 +22,12 @@ public class ViewController {
     private void handleButtonClick(ActionEvent event) {
 
         Button source = (Button) event.getSource();
+        homepane.setVisible(false);
         pane1.setVisible(false);
         pane2.setVisible(false);
         pane3.setVisible(false);
         pane4.setVisible(false);
+        pane5.setVisible(false);
 
         switch (source.getId()) {
             case "button1" -> pane1.setVisible(true);
@@ -46,6 +35,7 @@ public class ViewController {
             case "button3" -> pane3.setVisible(true);
             case "button4" -> pane4.setVisible(true);
             case "button5" -> pane5.setVisible(true);
+            case "homebutton" -> homepane.setVisible(true);
             default -> System.out.println("idk");
         }
         // etc...
