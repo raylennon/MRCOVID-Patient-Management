@@ -13,10 +13,11 @@ public class home extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
-            primaryStage.setTitle("Sample JavaFx GUI");
-            Scene scene = new Scene(root, 600, 600);
+            Parent root = FXMLLoader.load(getClass().getResource("split.fxml"));
+            primaryStage.setTitle("MR COVID-19 DASHBOARD");
+            Scene scene = new Scene(root, 1000, 600);
             primaryStage.setScene(scene);
+            primaryStage.setResizable(false);
             primaryStage.show();
         } catch (Exception e) {
             LOGGER.log(Level.WARNING,e.getMessage());

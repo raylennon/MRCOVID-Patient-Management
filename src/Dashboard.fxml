@@ -20,7 +20,7 @@
             </Text>
             <ImageView fitHeight="101.0" fitWidth="102.0" layoutX="477.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Resources/covid.jpg" />
+                  <Image url="https://www.statnews.com/wp-content/uploads/2020/02/Coronavirus-CDC-645x645.jpg" />
                </image>
             </ImageView>
             <Button layoutX="35.0" layoutY="84.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="111.0" text="Report Case" />
