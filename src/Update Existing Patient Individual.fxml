@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label alignment="CENTER" layoutX="171.0" prefHeight="35.0" prefWidth="640.0" style="&#10;" text="Update Existing Patient (indiv)" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Label>
+            <Text layoutX="66.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Information" wrappingWidth="246.55083465576172">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Pane layoutY="50.0" prefHeight="300.0" prefWidth="640.0">
+               <children>
+                  <TextField layoutX="69.0" layoutY="21.0" promptText="First Name" />
+                  <TextField layoutX="256.0" layoutY="21.0" promptText="Last Name" />
+                  <TextField layoutX="442.0" layoutY="21.0" promptText="Date of Birth (MM/DD/YYYY)" />
+                  <TextField layoutX="69.0" layoutY="68.0" promptText="Address" />
+                  <TextField layoutX="256.0" layoutY="68.0" promptText="City" />
+                  <MenuButton layoutX="442.0" layoutY="67.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="152.0" text="State">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                     </items>
+                  </MenuButton>
+                  <TextField layoutX="442.0" layoutY="121.0" promptText="ZIP Code" />
+                  <TextField layoutX="69.0" layoutY="121.0" promptText="Email" />
+                  <TextField layoutX="256.0" layoutY="121.0" promptText="Phone" />
+                  <MenuButton layoutX="67.0" layoutY="171.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="152.0" text="Sex">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                     </items>
+                  </MenuButton>
+                  <MenuButton layoutX="254.0" layoutY="171.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="152.0" text="Ethnicity">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                     </items>
+                  </MenuButton>
+                  <MenuButton layoutX="442.0" layoutY="171.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="152.0" text="Race">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                     </items>
+                  </MenuButton>
+                  <TextField layoutX="159.0" layoutY="222.0" promptText="Symptomatic?" />
+                  <TextField layoutX="357.0" layoutY="222.0" promptText="First COVID-19 Test?" />
+                  <Button layoutX="288.0" layoutY="321.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Save" />
+                  <Text layoutX="61.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lab Results" wrappingWidth="246.55083465576172">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="209.0" layoutY="271.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="Positive" />
+                  <Button layoutX="387.0" layoutY="271.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="Negative" />
+               </children>
+            </Pane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
