@@ -1,6 +1,7 @@
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.event.ActionEvent;
+import javafx.scene.layout.AnchorPane;
 
 public class ViewController {
 
@@ -19,35 +20,33 @@ public class ViewController {
     @FXML
     private Button button5 ;
 
-    public void initialize() {
-        // initialization here, if needed...
-    }
+    @FXML
+    private AnchorPane pane1;
+    @FXML
+    private AnchorPane pane2;
+    @FXML
+    private AnchorPane pane3;
+    @FXML
+    private AnchorPane pane4;
+    @FXML
+    private AnchorPane pane5;
 
     @FXML
     private void handleButtonClick(ActionEvent event) {
-        // I really don't recommend using a single handler like this,
-        // but it will work
-        //System.out.println("does this work???");
+
         Button source = (Button) event.getSource();
+        pane1.setVisible(false);
+        pane2.setVisible(false);
+        pane3.setVisible(false);
+        pane4.setVisible(false);
 
         switch (source.getId()) {
-            case "button1":
-                System.out.println("Button 1");
-                break;
-            case "button2":
-                System.out.println("Button 2");
-                break;
-            case "button3":
-                System.out.println("Looks like 3");
-                break;
-            case "button4":
-                System.out.println("Button 4");
-                break;
-            case "button5":
-                System.out.println("Probably 5");
-                break;
-            default:
-                System.out.println("idk");
+            case "button1" -> pane1.setVisible(true);
+            case "button2" -> pane2.setVisible(true);
+            case "button3" -> pane3.setVisible(true);
+            case "button4" -> pane4.setVisible(true);
+            case "button5" -> pane5.setVisible(true);
+            default -> System.out.println("idk");
         }
         // etc...
     }

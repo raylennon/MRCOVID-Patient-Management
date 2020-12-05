@@ -5,6 +5,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -13,52 +14,61 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="640" prefHeight="-1.0" prefWidth="640" VBox.vgrow="ALWAYS">
       <children>
-            <SplitPane layoutY="-1.0" prefHeight="1000.0" prefWidth="1000.0">
+          <AnchorPane layoutX="470.0" layoutY="-10.0" minHeight="0.0" minWidth="0.0" prefHeight="96.0" prefWidth="1018.0" />
+            <SplitPane dividerPositions="0.10120240480961924" layoutY="-1.0" orientation="VERTICAL" prefHeight="1000.0" prefWidth="1107.0">
               <items>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="124.0" style="-fx-background-color: white;">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #1d64cc;">
                      <children>
-                      <AnchorPane layoutX="470.0" layoutY="-9.0" minHeight="0.0" minWidth="0.0" prefHeight="96.0" prefWidth="1018.0" />
-                        <SplitPane dividerPositions="0.10120240480961924" orientation="VERTICAL" prefHeight="1000.0" prefWidth="1107.0">
+                        <Text fill="#f5f5f5" layoutX="132.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MR COVID-19 Dashboard" textAlignment="CENTER" wrappingWidth="754.1366729736328">
+                           <font>
+                              <Font name="System Bold" size="45.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="89.0" fitWidth="88.0" layoutX="88.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="https://images.theconversation.com/files/319386/original/file-20200309-167285-1p9yqjv.png?ixlib=rb-1.1.0&amp;q=45&amp;auto=format&amp;w=1000&amp;fit=clip" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="89.0" fitWidth="88.0" layoutX="828.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="https://images.theconversation.com/files/319386/original/file-20200309-167285-1p9yqjv.png?ixlib=rb-1.1.0&amp;q=45&amp;auto=format&amp;w=1000&amp;fit=clip" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <SplitPane centerShape="false" dividerPositions="0.2" layoutX="-5.0" layoutY="-4.0" prefHeight="903.0" prefWidth="1234.0" style="-fx-padding: 1 0 1 0;">
                           <items>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #1d64cc;">
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="307.0" style="-fx-background-color: #a1a1a1;">
                                  <children>
-                                    <Text fill="#f5f5f5" layoutX="132.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MR COVID-19 Dashboard" textAlignment="CENTER" wrappingWidth="754.1366729736328">
-                                       <font>
-                                          <Font name="System Bold" size="45.0" />
-                                       </font>
-                                    </Text>
-                                    <ImageView fitHeight="89.0" fitWidth="88.0" layoutX="88.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="https://images.theconversation.com/files/319386/original/file-20200309-167285-1p9yqjv.png?ixlib=rb-1.1.0&amp;q=45&amp;auto=format&amp;w=1000&amp;fit=clip" />
-                                       </image>
-                                    </ImageView>
-                                    <ImageView fitHeight="89.0" fitWidth="88.0" layoutX="828.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="https://images.theconversation.com/files/319386/original/file-20200309-167285-1p9yqjv.png?ixlib=rb-1.1.0&amp;q=45&amp;auto=format&amp;w=1000&amp;fit=clip" />
-                                       </image>
-                                    </ImageView>
-                                 </children></AnchorPane>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                                 <children>
-                                    <SplitPane centerShape="false" dividerPositions="0.15178571428571427" layoutX="-5.0" layoutY="-4.0" prefHeight="903.0" prefWidth="1234.0">
-                                      <items>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #a1a1a1;">
-                                             <children>
-                                                <Button fx:id="button1" layoutX="26.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: transparent;" text="Provider Information" />
-                                                <Button fx:id="button2" layoutX="26.0" layoutY="104.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: transparent;" text="New Patient" />
-                                                <Button fx:id="button3" layoutX="26.0" layoutY="189.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: transparent;" text="View Stats" />
-                                                <Button fx:id="button4" layoutX="26.0" layoutY="274.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: transparent;" text="Send Lab Results to Patients" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" />
-                                                <Button fx:id="button5" layoutX="26.0" layoutY="358.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: transparent;" text="Send Report to State" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" />
-                                             </children>
-                                          </AnchorPane>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
-                                      </items>
-                                    </SplitPane>
+                                    <Button fx:id="button1" layoutX="26.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: transparent;" text="Provider Information" />
+                                    <Button fx:id="button2" layoutX="26.0" layoutY="104.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: transparent;" text="New Patient" />
+                                    <Button fx:id="button3" layoutX="26.0" layoutY="189.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: transparent;" text="View Stats" />
+                                    <Button fx:id="button4" layoutX="26.0" layoutY="274.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: transparent;" text="Send Lab Results to Patients" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" />
+                                    <Button fx:id="button5" layoutX="26.0" layoutY="358.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: transparent;" text="Send Report to State" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" />
                                  </children>
                               </AnchorPane>
+                              <StackPane id="mainStack">
+                                 <children>
+                                    <AnchorPane fx:id="pane1" prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="89.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="https://images.theconversation.com/files/319386/original/file-20200309-167285-1p9yqjv.png?ixlib=rb-1.1.0&amp;q=45&amp;auto=format&amp;w=1000&amp;fit=clip" />
+                                             </image>
+                                          </ImageView>
+                                       </children></AnchorPane>
+                                    <AnchorPane fx:id="pane2" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" visible="false" />
+                                    <AnchorPane fx:id="pane3" prefHeight="200.0" prefWidth="200.0" visible="false" />
+                                    <AnchorPane fx:id="pane4" prefHeight="200.0" prefWidth="200.0" visible="false" />
+                                    <AnchorPane fx:id="pane5" prefHeight="200.0" prefWidth="200.0" visible="false" />
+                                 </children>
+                              </StackPane>
                           </items>
                         </SplitPane>
-                     </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
               </items>
             </SplitPane>
       </children>
