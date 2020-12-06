@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
@@ -46,13 +47,13 @@
                 <StackPane id="mainStack">
                     <AnchorPane fx:id="homepane" prefHeight="200.0" prefWidth="200.0" visible="false">
                   <children>
-                     <Text layoutX="244.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to MRCOVID-19" textAlignment="CENTER" wrappingWidth="166.0">
+                     <Text layoutX="273.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to MRCOVID-19" textAlignment="CENTER" wrappingWidth="166.0">
                         <font>
                            <Font name="System Bold" size="24.0" />
                         </font>
                      </Text>
-                     <TextField layoutX="193.0" layoutY="222.0" prefHeight="38.0" prefWidth="254.0" promptText="ID #" />
-                     <Button layoutX="272.0" layoutY="279.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="97.0" text="Sign In" />
+                     <TextField layoutX="222.0" layoutY="221.0" prefHeight="38.0" prefWidth="254.0" promptText="ID #" />
+                     <Button layoutX="301.0" layoutY="278.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="97.0" text="Sign In" />
                   </children>
                     </AnchorPane>
                     <AnchorPane fx:id="pane1" prefHeight="200.0" prefWidth="200.0" visible="false">
@@ -84,7 +85,7 @@
                   </Label>
                   <Button layoutX="540.0" layoutY="331.0" mnemonicParsing="false" text="Edit" />
                     </AnchorPane>
-                    <AnchorPane fx:id="pane2" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" visible="false">
+                    <AnchorPane fx:id="pane2" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                         <Label layoutX="278.0" layoutY="25.0" text="New Patient" textAlignment="CENTER">
                             <font>
                                 <Font name="System Bold" size="32.0" />
@@ -95,36 +96,34 @@
                   <TextField layoutX="481.0" layoutY="108.0" promptText="Date of Birth (MM/DD/YYYY)" />
                   <TextField layoutX="108.0" layoutY="167.0" promptText="Address" />
                   <TextField layoutX="295.0" layoutY="167.0" promptText="City" />
-                  <MenuButton layoutX="481.0" layoutY="166.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="152.0" text="State">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="Action 1" />
-                        <MenuItem mnemonicParsing="false" text="Action 2" />
-                     </items>
-                  </MenuButton>
                   <TextField layoutX="477.0" layoutY="233.0" promptText="ZIP Code" />
                   <TextField layoutX="108.0" layoutY="233.0" promptText="Email" />
                   <TextField layoutX="295.0" layoutY="233.0" promptText="Phone" />
                   <MenuButton layoutX="108.0" layoutY="303.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="152.0" text="Sex">
                      <items>
-                        <MenuItem mnemonicParsing="false" text="Action 1" />
-                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                        <MenuItem mnemonicParsing="false" text="Male" />
+                        <MenuItem mnemonicParsing="false" text="Female" />
+                        <MenuItem mnemonicParsing="false" text="Other" />
                      </items>
                   </MenuButton>
-                  <MenuButton layoutX="295.0" layoutY="303.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="152.0" text="Ethnicity">
+                  <MenuButton layoutX="295.0" layoutY="303.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="152.0" text="Action 2">
                      <items>
-                        <MenuItem mnemonicParsing="false" text="Action 1" />
-                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                        <MenuItem mnemonicParsing="false" text="Hispanic/ Latino" />
+                        <MenuItem mnemonicParsing="false" text="Not Hispanic/ Latino" />
                      </items>
                   </MenuButton>
                   <MenuButton layoutX="481.0" layoutY="303.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="152.0" text="Race">
                      <items>
-                        <MenuItem mnemonicParsing="false" text="Action 1" />
-                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                        <MenuItem mnemonicParsing="false" text="White" />
+                        <MenuItem mnemonicParsing="false" text="Black/ African American" />
+                        <MenuItem mnemonicParsing="false" text="First Nation/ Native American" />
+                        <MenuItem mnemonicParsing="false" text="Asian / Pacific Islander" />
                      </items>
                   </MenuButton>
-                  <TextField layoutX="194.0" layoutY="360.0" promptText="Symptomatic?" />
-                  <TextField layoutX="401.0" layoutY="360.0" promptText="First COVID-19 Test?" />
-                  <Button layoutX="322.0" layoutY="401.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="97.0" text="Save" />
+                  <Button fx:id="savedata" layoutX="322.0" layoutY="401.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="32.0" prefWidth="97.0" text="Save" />
+                  <CheckBox layoutX="195.0" layoutY="364.0" mnemonicParsing="false" text="First Test" />
+                  <CheckBox layoutX="427.0" layoutY="364.0" mnemonicParsing="false" text="Experiencing Symptoms" />
+                  <TextField layoutX="483.0" layoutY="167.0" promptText="State" />
                     </AnchorPane>
                <AnchorPane fx:id="updatepane" layoutX="10.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" visible="false">
                   <children>
@@ -133,40 +132,35 @@
                            <Font name="System Bold" size="32.0" />
                         </font>
                      </Label>
-                     <TextField layoutX="109.0" layoutY="109.0" promptText="First Name" />
-                     <TextField layoutX="296.0" layoutY="109.0" promptText="Last Name" />
-                     <TextField layoutX="482.0" layoutY="109.0" promptText="Date of Birth (MM/DD/YYYY)" />
-                     <TextField layoutX="109.0" layoutY="156.0" promptText="Address" />
-                     <TextField layoutX="296.0" layoutY="156.0" promptText="City" />
-                     <MenuButton layoutX="482.0" layoutY="155.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="152.0" text="State">
-                        <items>
-                           <MenuItem mnemonicParsing="false" text="Action 1" />
-                           <MenuItem mnemonicParsing="false" text="Action 2" />
-                        </items>
-                     </MenuButton>
-                     <TextField layoutX="482.0" layoutY="209.0" promptText="ZIP Code" />
-                     <TextField layoutX="109.0" layoutY="209.0" promptText="Email" />
-                     <TextField layoutX="296.0" layoutY="209.0" promptText="Phone" />
+                     <TextField fx:id="firstentry" layoutX="109.0" layoutY="109.0" promptText="First Name" />
+                     <TextField fx:id="lastentry" layoutX="296.0" layoutY="109.0" promptText="Last Name" />
+                     <TextField fx:id="DOBentry" layoutX="482.0" layoutY="109.0" promptText="Date of Birth (MM/DD/YYYY)" />
+                     <TextField fx:id="addressentry" layoutX="109.0" layoutY="156.0" promptText="Address" />
+                     <TextField fx:id="cityentry" layoutX="296.0" layoutY="156.0" promptText="City" />
+                     <TextField fx:id="zipcodeentry" layoutX="482.0" layoutY="209.0" promptText="ZIP Code" />
+                     <TextField fx:id="emailentry" layoutX="109.0" layoutY="209.0" promptText="Email" />
+                     <TextField fx:id="phoneentry" layoutX="296.0" layoutY="209.0" promptText="Phone" />
                      <MenuButton layoutX="107.0" layoutY="259.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="152.0" text="Sex">
                         <items>
-                           <MenuItem mnemonicParsing="false" text="Action 1" />
-                           <MenuItem mnemonicParsing="false" text="Action 2" />
+                           <MenuItem mnemonicParsing="false" text="Male" />
+                           <MenuItem mnemonicParsing="false" text="Female" />
+                           <MenuItem mnemonicParsing="false" text="Other" />
                         </items>
                      </MenuButton>
                      <MenuButton layoutX="294.0" layoutY="259.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="152.0" text="Ethnicity">
                         <items>
-                           <MenuItem mnemonicParsing="false" text="Action 1" />
-                           <MenuItem mnemonicParsing="false" text="Action 2" />
+                           <MenuItem mnemonicParsing="false" text="Hispanic/ Latino" />
+                           <MenuItem mnemonicParsing="false" text="Not Hispanic/ Latino" />
                         </items>
                      </MenuButton>
                      <MenuButton layoutX="482.0" layoutY="259.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="152.0" text="Race">
                         <items>
-                           <MenuItem mnemonicParsing="false" text="Action 1" />
-                           <MenuItem mnemonicParsing="false" text="Action 2" />
+                           <MenuItem mnemonicParsing="false" text="White" />
+                           <MenuItem mnemonicParsing="false" text="Black/ African American" />
+                           <MenuItem mnemonicParsing="false" text="First Nation/ Native American" />
+                           <MenuItem mnemonicParsing="false" text="Asian / Pacific Islander" />
                         </items>
                      </MenuButton>
-                     <TextField layoutX="199.0" layoutY="310.0" promptText="Symptomatic?" />
-                     <TextField layoutX="397.0" layoutY="310.0" promptText="First COVID-19 Test?" />
                      <Button layoutX="328.0" layoutY="409.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Save" />
                      <Text layoutX="101.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lab Results" wrappingWidth="246.55083465576172">
                         <font>
@@ -175,9 +169,12 @@
                      </Text>
                      <ToggleButton layoutX="249.0" layoutY="359.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: #03fc90;" text="Positive" />
                      <ToggleButton layoutX="427.0" layoutY="359.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: #e6594c;" text="Negative" />
+                     <CheckBox fx:id="symptomentry" layoutX="212.0" layoutY="318.0" mnemonicParsing="false" text="Experiencing Symptoms" />
+                     <CheckBox fx:id="firsttestentry" layoutX="412.0" layoutY="318.0" mnemonicParsing="false" text="First Test" />
+                     <TextField fx:id="stateentry" layoutX="484.0" layoutY="156.0" promptText="State" />
                   </children>
                </AnchorPane>
-                    <AnchorPane fx:id="pane3" prefHeight="200.0" prefWidth="200.0">
+                    <AnchorPane fx:id="pane3" prefHeight="200.0" prefWidth="200.0" visible="false">
                   <children>
                      <Button layoutX="114.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="Daily" />
                      <Button layoutX="416.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="Monthly" />
@@ -204,15 +201,28 @@
                         </Label>
                     </AnchorPane>
                     <AnchorPane fx:id="pane5" prefHeight="200.0" prefWidth="200.0" visible="false">
-                        <Label layoutX="175.0" layoutY="326.0" text="Send Report to State :/">
-                            <font>
-                                <Font size="43.0" />
-                            </font>
-                        </Label>
+                  <Button layoutX="316.0" layoutY="358.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="Send" />
+                  <Button layoutX="501.0" layoutY="69.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="Enter" />
+                  <TextField layoutX="280.0" layoutY="68.0" promptText="MM/DD/YYYY" />
+                  <Text layoutX="117.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lab Date" wrappingWidth="82.95703125">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="117.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report Preview" wrappingWidth="326.95703125">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="173.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="this should show the data">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Text>
                     </AnchorPane>
                    <AnchorPane fx:id="updatelanding" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" visible="false">
                       <children>
-                         <TextField layoutX="421.0" layoutY="145.0" promptText="Name" />
+                         <TextField fx:id="searchName" layoutX="421.0" layoutY="145.0" promptText="Name" />
                          <TextField layoutX="421.0" layoutY="231.0" promptText="MM/DD/YYYY" />
                          <Button fx:id="search" layoutX="323.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="32.0" prefWidth="97.0" text="Search" />
                          <Text layoutX="126.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Individual Patient">

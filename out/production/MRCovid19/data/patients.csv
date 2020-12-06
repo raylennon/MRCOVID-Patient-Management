@@ -1,5 +1,5 @@
 FirstName, LastName, BirthDate, Address, City, State, Email, Phone, Zip Code, Sex, Ethnicity, Race, Symptoms, Last Test Date, Status
-Ray, Lennon, 09/06/2002, 742 Evergreen Terrace, Springfield, ??, raymond.lennon@duke.edu, (939)-555-0113, 63463, Male, White, N/A, 12/5/2020, False
-George, Harrison, 02/25/1943, 12 Friar Park, Liverpool, AL, press@subway.com, (410)-461-4710, 53453, Male, White, N/A, 11/29/2001
-Ringo, Starr, 07/07/1940, 10 Admiral Grove, Liverpool, MO, press@krispykreme.com, (443)-636-5624, Male, White, N/A, 07/14/2020
-Paul, McCartney, 06/18/1942, 7 Cavendish Avenue, London, KS, press@daveandbuster.com, (214)-357-9588, Male, White, N/A, 13/32/2021
+Ray, Lennon, 09/06/2002, 742 Evergreen Terrace, Springfield, ??, raymond.lennon@duke.edu, (939)-555-0113, 63463, 1, false, 1, false, 12/5/2020, false
+George, Harrison, 02/25/1943, 12 Friar Park, Liverpool, AL, press@subway.com, (410)-461-4710, 53453, 1, false, 1, false, 11/29/2001, false
+Ringo, Starr, 07/07/1940, 10 Admiral Grove, Liverpool, MO, press@krispykreme.com, (443)-636-5624, 345345, 1, false, 1, true, 07/14/2020, false
+Paul, McCartney, 06/18/1942, 7 Cavendish Avenue, London, KS, press@daveandbuster.com, (214)-357-9588, 345345, 1, false, 1, false, 13/32/2021, false

@@ -1,4 +1,4 @@
-pieTable <- read.csv("~/dailyPie.csv")
+pieTable <- read.csv("./data/dailyPie.csv")
 
 numbers <- as.numeric(pieTable[1,])
 pieTable[2,] <- round((pieTable[1,]*100)/sum(pieTable[1,]))
