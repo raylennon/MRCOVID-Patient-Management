@@ -122,8 +122,8 @@ public class home extends Application {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("Split.fxml"));
             primaryStage.setTitle("MR COVID-19 DASHBOARD");
-            primaryStage.getIcons().add(new Image("https://images.theconversation.com/files/319386/original/file-20200309-167285-1p9yqjv.png?ixlib=rb-1.1.0&q=45&auto=format&w=1000&fit=clip"));
-            Scene scene = new Scene(root, 1000, 600);
+            primaryStage.getIcons().add(new Image("https://github.com/raylennon/MRCOVID/blob/main/usable.png?raw=true"));
+            Scene scene = new Scene(root, 1000, 630);
             primaryStage.setScene(scene);
             primaryStage.setResizable(false);
 
