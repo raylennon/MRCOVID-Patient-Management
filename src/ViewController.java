@@ -17,6 +17,8 @@ public class ViewController {
     private AnchorPane pane4;
     @FXML
     private AnchorPane pane5;
+    @FXML
+    private AnchorPane updatepane;
 
     @FXML
     private void handleButtonClick(ActionEvent event) {
@@ -28,6 +30,7 @@ public class ViewController {
         pane3.setVisible(false);
         pane4.setVisible(false);
         pane5.setVisible(false);
+        updatepane.setVisible(false);
 
         switch (source.getId()) {
             case "button1" -> pane1.setVisible(true);
@@ -36,6 +39,7 @@ public class ViewController {
             case "button4" -> pane4.setVisible(true);
             case "button5" -> pane5.setVisible(true);
             case "homebutton" -> homepane.setVisible(true);
+            case "updatebutton" -> updatepane.setVisible(true);
             default -> System.out.println("idk");
         }
         // etc...
