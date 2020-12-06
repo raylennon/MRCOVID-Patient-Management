@@ -18,6 +18,11 @@ public class home extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+
+        // Pull User Data from CSV
+        //
+
+
         try {
             Parent root = FXMLLoader.load(getClass().getResource("split.fxml"));
             primaryStage.setTitle("MR COVID-19 DASHBOARD");

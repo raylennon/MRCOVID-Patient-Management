@@ -8,6 +8,7 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -44,11 +45,15 @@
                 </AnchorPane>
                 <StackPane id="mainStack">
                     <AnchorPane fx:id="homepane" prefHeight="200.0" prefWidth="200.0" visible="false">
-                        <Label layoutX="293.0" layoutY="94.0" text="Home">
-                            <font>
-                                <Font size="43.0" />
-                            </font>
-                        </Label>
+                  <children>
+                     <Text layoutX="244.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to MRCOVID-19" textAlignment="CENTER" wrappingWidth="166.0">
+                        <font>
+                           <Font name="System Bold" size="24.0" />
+                        </font>
+                     </Text>
+                     <TextField layoutX="193.0" layoutY="222.0" prefHeight="38.0" prefWidth="254.0" promptText="ID #" />
+                     <Button layoutX="272.0" layoutY="279.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="97.0" text="Sign In" />
+                  </children>
                     </AnchorPane>
                     <AnchorPane fx:id="pane1" prefHeight="200.0" prefWidth="200.0" visible="false">
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="513.0" prefWidth="474.0">
@@ -121,7 +126,7 @@
                   <TextField layoutX="401.0" layoutY="360.0" promptText="First COVID-19 Test?" />
                   <Button layoutX="322.0" layoutY="401.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="97.0" text="Save" />
                     </AnchorPane>
-               <AnchorPane fx:id="updatepane" layoutX="10.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <AnchorPane fx:id="updatepane" layoutX="10.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" visible="false">
                   <children>
                      <Label layoutX="197.0" layoutY="27.0" text="Update Existing Patient" textAlignment="CENTER">
                         <font>
@@ -168,8 +173,8 @@
                            <Font size="18.0" />
                         </font>
                      </Text>
-                     <Button layoutX="249.0" layoutY="359.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: #03fc90;" text="Positive" />
-                     <Button layoutX="427.0" layoutY="359.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: #e6594c;" text="Negative" />
+                     <ToggleButton layoutX="249.0" layoutY="359.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: #03fc90;" text="Positive" />
+                     <ToggleButton layoutX="427.0" layoutY="359.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: #e6594c;" text="Negative" />
                   </children>
                </AnchorPane>
                     <AnchorPane fx:id="pane3" prefHeight="200.0" prefWidth="200.0" visible="false">
@@ -193,17 +198,17 @@
                             </font>
                         </Label>
                     </AnchorPane>
-                   <AnchorPane fx:id="updatelanding" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" visible="false">
+                   <AnchorPane fx:id="updatelanding" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0">
                       <children>
-                         <TextField layoutX="421.0" layoutY="101.0" promptText="Name" />
-                         <TextField layoutX="421.0" layoutY="187.0" promptText="mm/dd/yyyy" />
+                         <TextField layoutX="421.0" layoutY="145.0" promptText="Name" />
+                         <TextField layoutX="421.0" layoutY="231.0" promptText="MM/DD/YYYY" />
                          <Button fx:id="search" layoutX="323.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="32.0" prefWidth="97.0" text="Search" />
-                         <Text layoutX="126.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Individual Patient">
+                         <Text layoutX="126.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Individual Patient">
                             <font>
                                <Font size="14.0" />
                             </font>
                          </Text>
-                         <Text layoutX="126.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Patient List by Test Date">
+                         <Text layoutX="126.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Patient List by Test Date">
                             <font>
                                <Font size="14.0" />
                             </font>
