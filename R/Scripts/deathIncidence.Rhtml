@@ -1,0 +1,25 @@
+<html>
+
+<head>
+
+<!--begin.rcode, message=FALSE, include=FALSE
+library(formattable)
+df <- read.csv("~/CovidISdata2.csv")
+df <- df[,-5]
+colnames <- c("Age group", "No. of deaths", "No. of infections","Death as proportion of infection (%)")
+colnames(df) <- colnames
+str(df)
+df$`Death as proportion of infection (%)` <- gsub(",",".",df$`Death as proportion of infection (%)`)
+df$`Death as proportion of infection (%)` <- gsub("%","",df$`Death as proportion of infection (%)`)
+
+
+
+end.rcode-->
+
+<!--begin.rcode , message=FALSE, fig.align='center', fig.width=7, fig.height=6
+
+formattable(df, align = c("c", rep("c", NCOL(table) - 1)), list(`Death as proportion of infection (%)`= color_tile("lightskyblue1", "steelblue")))
+
+end.rcode-->
+
+</html>

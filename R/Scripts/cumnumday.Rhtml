@@ -1,0 +1,59 @@
+<html>
+
+<head>
+
+<!--begin.rcode , include=FALSE
+library(dplyr)
+library(lubridate)
+library(ggplot2)
+library(forecast)
+
+theme_set(theme_classic())
+
+df <-read.csv("~/CovidISdata1.csv")
+colnames(df) <- c("Weeks","0-4","5-14","15-24","25-49","50-64","65-79","80_above")
+df$`0-4` <- as.numeric(gsub(",",".",df$`0-4`))
+df$`5-14` <- as.numeric(gsub(",",".",df$`5-14`))
+df$`15-24` <- as.numeric(gsub(",",".",df$`15-24`))
+df$`25-49` <- as.numeric(gsub(",",".",df$`25-49`))
+df$`50-64` <- as.numeric(gsub(",",".",df$`50-64`))
+df$`65-79` <- as.numeric(gsub(",",".",df$`65-79`))
+df$`80_above` <- as.numeric(gsub(",",".",df$`80_above`))
+
+zero_four <- cbind(df$Weeks,df$`0-4`,"0-4")
+five_fourt <- cbind(df$Weeks,df$`5-14`,"5-14")
+fift_twent <- cbind(df$Weeks,df$`15-24`,"15-24")
+twent_fourt <- cbind(df$Weeks,df$`25-49`,"25-49")
+fifty_sixt <- cbind(df$Weeks,df$`50-64`,"50-64")
+sixt_sev <- cbind(df$Weeks,df$`65-79`,"65-79")
+eighty <-cbind(df$Weeks,df$`80_above`,"80-above")
+df2 <- as.data.frame(rbind(zero_four,five_fourt,fift_twent,twent_fourt,fifty_sixt,sixt_sev,eighty))
+colnames(df2) <- c("Weeks", "Number of cases","Age group")
+
+df2$`Number of cases` <- c(21,34,51,63,47,32,50)
+df2$Weeks <- as.numeric(as.character(df2$Weeks))
+
+filteredweek <- dplyr::filter(df2, grepl('48', Weeks))
+#setup a color vector that matches the yearly thing thing
+rainbow <- c("tomato2","darkgoldenrod2","springgreen3","turquoise","deepskyblue1","darkorchid","deeppink1")
+levels(filteredweek$`Age group`)
+filteredweek$`Age group` <- relevel(filteredweek$`Age group`,"80-above")
+filteredweek$`Age group` <- relevel(filteredweek$`Age group`,"65-79")
+filteredweek$`Age group` <- relevel(filteredweek$`Age group`,"50-64")
+filteredweek$`Age group` <- relevel(filteredweek$`Age group`,"25-49")
+filteredweek$`Age group` <- relevel(filteredweek$`Age group`,"15-24")
+filteredweek$`Age group` <- relevel(filteredweek$`Age group`,"5-14")
+filteredweek$`Age group` <- relevel(filteredweek$`Age group`,"0-4")
+
+
+
+end.rcode-->
+
+<!--begin.rcode , message=FALSE, fig.align='center', fig.width=7, fig.height=6
+
+ggplot(filteredweek, aes(filteredweek$`Age group`,filteredweek$`Number of cases`)) + 
+  geom_bar(stat="identity", width = 0.5, fill=rainbow) + labs(title="Cumulative number of infection by age group today", 
+                                                              subtitle="", 
+                                                              caption="", x="Age group", y="Number of cases")
+
+end.rcode-->
