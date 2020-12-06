@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController">
+    <SplitPane dividerPositions="0.165" orientation="VERTICAL" prefHeight="1000.0" prefWidth="1107.0">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #1d64cc;">
+            <Text fill="#f5f5f5" layoutX="132.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MR COVID-19 Dashboard" textAlignment="CENTER" wrappingWidth="754.1366729736328">
+                <font>
+                    <Font name="System Bold" size="45.0" />
+                </font>
+            </Text>
+            <ImageView fitHeight="89.0" fitWidth="88.0" layoutX="88.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="https://images.theconversation.com/files/319386/original/file-20200309-167285-1p9yqjv.png?ixlib=rb-1.1.0&amp;q=45&amp;auto=format&amp;w=1000&amp;fit=clip" />
+            </ImageView>
+            <ImageView fitHeight="89.0" fitWidth="88.0" layoutX="828.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="https://images.theconversation.com/files/319386/original/file-20200309-167285-1p9yqjv.png?ixlib=rb-1.1.0&amp;q=45&amp;auto=format&amp;w=1000&amp;fit=clip" />
+            </ImageView>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <SplitPane centerShape="false" dividerPositions="0.1766612641815235" layoutX="-5.0" layoutY="-4.0" prefHeight="903.0" prefWidth="1234.0" style="-fx-padding: 1 0 1 0;">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="307.0" style="-fx-background-color: #a1a1a1;">
+                    <Button fx:id="button1" layoutX="44.0" layoutY="82.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="41.0" prefWidth="131.0" style="-fx-background-color: transparent;" text="Provider Information" />
+                    <Button fx:id="button2" layoutX="44.0" layoutY="159.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="41.0" prefWidth="131.0" style="-fx-background-color: transparent;" text="New Patient" />
+                    <Button fx:id="button3" layoutX="44.0" layoutY="289.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="41.0" prefWidth="131.0" style="-fx-background-color: transparent;" text="View Stats" />
+                    <Button fx:id="button4" layoutX="44.0" layoutY="347.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="60.0" prefWidth="131.0" style="-fx-background-color: transparent;" text="Send Lab Results to Patients" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" />
+                    <Button fx:id="button5" layoutX="44.0" layoutY="419.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="41.0" prefWidth="131.0" style="-fx-background-color: transparent;" text="Send Report to State" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" />
+                    <Button fx:id="homebutton" layoutX="44.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="41.0" prefWidth="131.0" style="-fx-background-color: transparent;" text="Home" />
+                    <Button fx:id="updatebutton" layoutX="44.0" layoutY="226.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="41.0" prefWidth="131.0" style="-fx-background-color: transparent;" text="Update Patient Info" />
+                </AnchorPane>
+                <StackPane id="mainStack">
+                    <AnchorPane fx:id="homepane" prefHeight="200.0" prefWidth="200.0" visible="false">
+                  <children>
+                     <Text layoutX="244.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to MRCOVID-19" textAlignment="CENTER" wrappingWidth="166.0">
+                        <font>
+                           <Font name="System Bold" size="24.0" />
+                        </font>
+                     </Text>
+                     <TextField layoutX="193.0" layoutY="222.0" prefHeight="38.0" prefWidth="254.0" promptText="ID #" />
+                     <Button layoutX="272.0" layoutY="279.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="97.0" text="Sign In" />
+                  </children>
+                    </AnchorPane>
+                    <AnchorPane fx:id="pane1" prefHeight="200.0" prefWidth="200.0" visible="false">
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="513.0" prefWidth="474.0">
+                     <children>
+                        <TextField layoutX="96.0" layoutY="97.0" promptText="First Name" />
+                        <TextField layoutX="96.0" layoutY="146.0" promptText="Last Name" />
+                        <Label layoutX="86.0" layoutY="43.0" text="Individual Provider">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox layoutX="87.0" layoutY="232.0" prefWidth="150.0" />
+                        <Label layoutX="110.0" layoutY="207.0" text="Select from Dropdown:" />
+                        <Button layoutX="143.0" layoutY="339.0" mnemonicParsing="false" text="Edit" />
+                        <Separator layoutX="348.0" layoutY="8.0" orientation="VERTICAL" prefHeight="513.0" prefWidth="6.0" />
+                     </children>
+                  </AnchorPane>
+                  <TextField layoutX="484.0" layoutY="85.0" promptText="Location" />
+                  <TextField layoutX="484.0" layoutY="134.0" promptText="Address" />
+                  <TextField layoutX="484.0" layoutY="186.0" prefHeight="28.0" prefWidth="63.0" promptText="City" />
+                  <ChoiceBox layoutX="613.0" layoutY="184.0" prefHeight="28.0" prefWidth="63.0" />
+                  <Label layoutX="571.0" layoutY="189.0" text="State:" />
+                  <TextField layoutX="484.0" layoutY="234.0" promptText="Phone" />
+                  <Label layoutX="476.0" layoutY="33.0" text="Clinic/Testing Site">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="540.0" layoutY="331.0" mnemonicParsing="false" text="Edit" />
+                    </AnchorPane>
+                    <AnchorPane fx:id="pane2" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" visible="false">
+                        <Label layoutX="278.0" layoutY="25.0" text="New Patient" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="32.0" />
+                            </font>
+                        </Label>
+                  <TextField layoutX="108.0" layoutY="108.0" promptText="First Name" />
+                  <TextField layoutX="295.0" layoutY="108.0" promptText="Last Name" />
+                  <TextField layoutX="481.0" layoutY="108.0" promptText="Date of Birth (MM/DD/YYYY)" />
+                  <TextField layoutX="108.0" layoutY="167.0" promptText="Address" />
+                  <TextField layoutX="295.0" layoutY="167.0" promptText="City" />
+                  <MenuButton layoutX="481.0" layoutY="166.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="152.0" text="State">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                     </items>
+                  </MenuButton>
+                  <TextField layoutX="477.0" layoutY="233.0" promptText="ZIP Code" />
+                  <TextField layoutX="108.0" layoutY="233.0" promptText="Email" />
+                  <TextField layoutX="295.0" layoutY="233.0" promptText="Phone" />
+                  <MenuButton layoutX="108.0" layoutY="303.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="152.0" text="Sex">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                     </items>
+                  </MenuButton>
+                  <MenuButton layoutX="295.0" layoutY="303.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="152.0" text="Ethnicity">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                     </items>
+                  </MenuButton>
+                  <MenuButton layoutX="481.0" layoutY="303.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="152.0" text="Race">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                     </items>
+                  </MenuButton>
+                  <TextField layoutX="194.0" layoutY="360.0" promptText="Symptomatic?" />
+                  <TextField layoutX="401.0" layoutY="360.0" promptText="First COVID-19 Test?" />
+                  <Button layoutX="322.0" layoutY="401.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="97.0" text="Save" />
+                    </AnchorPane>
+               <AnchorPane fx:id="updatepane" layoutX="10.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" visible="false">
+                  <children>
+                     <Label layoutX="197.0" layoutY="27.0" text="Update Existing Patient" textAlignment="CENTER">
+                        <font>
+                           <Font name="System Bold" size="32.0" />
+                        </font>
+                     </Label>
+                     <TextField layoutX="109.0" layoutY="109.0" promptText="First Name" />
+                     <TextField layoutX="296.0" layoutY="109.0" promptText="Last Name" />
+                     <TextField layoutX="482.0" layoutY="109.0" promptText="Date of Birth (MM/DD/YYYY)" />
+                     <TextField layoutX="109.0" layoutY="156.0" promptText="Address" />
+                     <TextField layoutX="296.0" layoutY="156.0" promptText="City" />
+                     <MenuButton layoutX="482.0" layoutY="155.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="152.0" text="State">
+                        <items>
+                           <MenuItem mnemonicParsing="false" text="Action 1" />
+                           <MenuItem mnemonicParsing="false" text="Action 2" />
+                        </items>
+                     </MenuButton>
+                     <TextField layoutX="482.0" layoutY="209.0" promptText="ZIP Code" />
+                     <TextField layoutX="109.0" layoutY="209.0" promptText="Email" />
+                     <TextField layoutX="296.0" layoutY="209.0" promptText="Phone" />
+                     <MenuButton layoutX="107.0" layoutY="259.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="152.0" text="Sex">
+                        <items>
+                           <MenuItem mnemonicParsing="false" text="Action 1" />
+                           <MenuItem mnemonicParsing="false" text="Action 2" />
+                        </items>
+                     </MenuButton>
+                     <MenuButton layoutX="294.0" layoutY="259.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="152.0" text="Ethnicity">
+                        <items>
+                           <MenuItem mnemonicParsing="false" text="Action 1" />
+                           <MenuItem mnemonicParsing="false" text="Action 2" />
+                        </items>
+                     </MenuButton>
+                     <MenuButton layoutX="482.0" layoutY="259.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="152.0" text="Race">
+                        <items>
+                           <MenuItem mnemonicParsing="false" text="Action 1" />
+                           <MenuItem mnemonicParsing="false" text="Action 2" />
+                        </items>
+                     </MenuButton>
+                     <TextField layoutX="199.0" layoutY="310.0" promptText="Symptomatic?" />
+                     <TextField layoutX="397.0" layoutY="310.0" promptText="First COVID-19 Test?" />
+                     <Button layoutX="328.0" layoutY="409.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Save" />
+                     <Text layoutX="101.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lab Results" wrappingWidth="246.55083465576172">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                     </Text>
+                     <ToggleButton layoutX="249.0" layoutY="359.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: #03fc90;" text="Positive" />
+                     <ToggleButton layoutX="427.0" layoutY="359.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: #e6594c;" text="Negative" />
+                  </children>
+               </AnchorPane>
+                    <AnchorPane fx:id="pane3" prefHeight="200.0" prefWidth="200.0">
+                  <children>
+                     <Button layoutX="114.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="Daily" />
+                     <Button layoutX="416.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="Monthly" />
+                     <Button layoutX="266.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="Weekly" />
+                     <Button layoutX="560.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="Yearly" />
+                     <Button layoutX="337.0" layoutY="426.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="Export" />
+                     <Text layoutX="217.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="~ this page should have a lot of graphs and data visuals ~" textAlignment="CENTER" wrappingWidth="351.951171875">
+                        <font>
+                           <Font size="36.0" />
+                        </font>
+                     </Text>
+                     <Label layoutX="269.0" layoutY="27.0" prefHeight="47.0" prefWidth="247.0" text="COVID Statistics" textAlignment="CENTER">
+                        <font>
+                           <Font name="System Bold" size="32.0" />
+                        </font>
+                     </Label>
+                  </children>
+                    </AnchorPane>
+                    <AnchorPane fx:id="pane4" prefHeight="200.0" prefWidth="200.0" visible="false">
+                        <Label layoutX="201.0" layoutY="330.0" text="Send Those Lab Results :P">
+                            <font>
+                                <Font size="43.0" />
+                            </font>
+                        </Label>
+                    </AnchorPane>
+                    <AnchorPane fx:id="pane5" prefHeight="200.0" prefWidth="200.0" visible="false">
+                        <Label layoutX="175.0" layoutY="326.0" text="Send Report to State :/">
+                            <font>
+                                <Font size="43.0" />
+                            </font>
+                        </Label>
+                    </AnchorPane>
+                   <AnchorPane fx:id="updatelanding" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" visible="false">
+                      <children>
+                         <TextField layoutX="421.0" layoutY="145.0" promptText="Name" />
+                         <TextField layoutX="421.0" layoutY="231.0" promptText="MM/DD/YYYY" />
+                         <Button fx:id="search" layoutX="323.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="32.0" prefWidth="97.0" text="Search" />
+                         <Text layoutX="126.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Individual Patient">
+                            <font>
+                               <Font size="14.0" />
+                            </font>
+                         </Text>
+                         <Text layoutX="126.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Patient List by Test Date">
+                            <font>
+                               <Font size="14.0" />
+                            </font>
+                         </Text>
+                         <Label layoutX="202.0" layoutY="30.0" text="Update Existing Patient" textAlignment="CENTER">
+                            <font>
+                               <Font name="System Bold" size="32.0" />
+                            </font>
+                         </Label>
+                      </children>
+                   </AnchorPane>
+                </StackPane>
+            </SplitPane>
+        </AnchorPane>
+    </SplitPane>
+</VBox>
