@@ -177,12 +177,24 @@
                      <ToggleButton layoutX="427.0" layoutY="359.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: #e6594c;" text="Negative" />
                   </children>
                </AnchorPane>
-                    <AnchorPane fx:id="pane3" prefHeight="200.0" prefWidth="200.0" visible="false">
-                        <Label layoutX="272.0" layoutY="314.0" text="View Stats B)">
-                            <font>
-                                <Font size="43.0" />
-                            </font>
-                        </Label>
+                    <AnchorPane fx:id="pane3" prefHeight="200.0" prefWidth="200.0">
+                  <children>
+                     <Button layoutX="114.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="Daily" />
+                     <Button layoutX="416.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="Monthly" />
+                     <Button layoutX="266.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="Weekly" />
+                     <Button layoutX="560.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="Yearly" />
+                     <Button layoutX="337.0" layoutY="426.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="Export" />
+                     <Text layoutX="217.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="~ this page should have a lot of graphs and data visuals ~" textAlignment="CENTER" wrappingWidth="351.951171875">
+                        <font>
+                           <Font size="36.0" />
+                        </font>
+                     </Text>
+                     <Label layoutX="269.0" layoutY="27.0" prefHeight="47.0" prefWidth="247.0" text="COVID Statistics" textAlignment="CENTER">
+                        <font>
+                           <Font name="System Bold" size="32.0" />
+                        </font>
+                     </Label>
+                  </children>
                     </AnchorPane>
                     <AnchorPane fx:id="pane4" prefHeight="200.0" prefWidth="200.0" visible="false">
                         <Label layoutX="201.0" layoutY="330.0" text="Send Those Lab Results :P">
@@ -198,7 +210,7 @@
                             </font>
                         </Label>
                     </AnchorPane>
-                   <AnchorPane fx:id="updatelanding" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0">
+                   <AnchorPane fx:id="updatelanding" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" visible="false">
                       <children>
                          <TextField layoutX="421.0" layoutY="145.0" promptText="Name" />
                          <TextField layoutX="421.0" layoutY="231.0" promptText="MM/DD/YYYY" />
