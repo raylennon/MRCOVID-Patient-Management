@@ -1,0 +1,24 @@
+<html>
+
+<head>
+
+<!--begin.rcode, message=FALSE
+pieTable <- read.csv("~/yearlyPie.csv")
+numbers <- as.numeric(pieTable[1,])
+pieTable[2,] <- round((pieTable[1,]*100)/sum(pieTable[1,]))
+pcts <- pieTable[2,]
+total <- as.character(sum(pieTable[1,]))
+
+lbls <- c("Symptomatic +","Asymptomatic +","Symptomatic -","Asymptomatic -")
+lbls <- paste(lbls,"  (",pcts,"%)")
+
+end.rcode-->
+
+<!--begin.rcode , message=FALSE, fig.align='center', fig.width=7, fig.height=6
+
+pie(numbers, labels = lbls , border="white", col=c("firebrick3","firebrick1","dodgerblue3","dodgerblue1")) + 
+  title(paste0("Test results      n=", total))
+
+end.rcode-->
+
+</html>

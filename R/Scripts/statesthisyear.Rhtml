@@ -1,0 +1,19 @@
+<html>
+
+<head>
+
+<!--begin.rcode, message=FALSE
+library(maps)
+library(usmap)
+library(ggplot2)
+statepop$CovidIncidence <- runif(n = 51, min = 500000, max = 5000000)
+end.rcode-->
+
+<!--begin.rcode , message=FALSE, fig.align='center', fig.width=7, fig.height=6
+plot_usmap(data = statepop, values = "CovidIncidence", color = "red") + 
+  scale_fill_continuous(name = "Cases reported (This year)", label = scales::comma) + 
+  theme(legend.position = "right") + labs(title="Reported Covid cases this year, by State")
+
+end.rcode-->
+
+</html>
