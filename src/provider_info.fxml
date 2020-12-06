@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.AutoCompleteTextField?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
@@ -75,14 +75,14 @@
                      </children></AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="513.0" prefWidth="474.0">
                      <children>
-                        <AutoCompleteTextField layoutX="8.0" layoutY="79.0" promptText="First Name" />
-                        <AutoCompleteTextField layoutX="8.0" layoutY="128.0" promptText="Last Name" />
-                        <AutoCompleteTextField layoutX="237.0" layoutY="79.0" promptText="Location" />
-                        <AutoCompleteTextField layoutX="237.0" layoutY="128.0" promptText="Address" />
-                        <AutoCompleteTextField layoutX="237.0" layoutY="180.0" prefHeight="28.0" prefWidth="63.0" promptText="City" />
+                        <TextField layoutX="8.0" layoutY="79.0" promptText="First Name" />
+                        <TextField layoutX="8.0" layoutY="128.0" promptText="Last Name" />
+                        <TextField layoutX="237.0" layoutY="79.0" promptText="Location" />
+                        <TextField layoutX="237.0" layoutY="128.0" promptText="Address" />
+                        <TextField layoutX="237.0" layoutY="180.0" prefHeight="28.0" prefWidth="63.0" promptText="City" />
                         <ChoiceBox layoutX="325.0" layoutY="200.0" prefHeight="28.0" prefWidth="63.0" />
                         <Label layoutX="331.0" layoutY="176.0" text="State:" />
-                        <AutoCompleteTextField layoutX="237.0" layoutY="228.0" promptText="Phone" />
+                        <TextField layoutX="237.0" layoutY="228.0" promptText="Phone" />
                         <Label layoutX="11.0" layoutY="36.0" text="Individual Provider">
                            <font>
                               <Font size="21.0" />
