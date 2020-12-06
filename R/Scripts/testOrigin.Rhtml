@@ -1,0 +1,51 @@
+<html>
+
+<head>
+
+<!--begin.rcode, message=FALSE, include=FALSE
+library(ggplot2)
+df <- read.csv("~/CovidISdata3.csv")
+df <- df[,-c(2,4,5)]  # let's only take one type of test to illustrate
+colnames(df) <- c("Date","Test number")
+str(df)
+#Need to format the date.
+#Actually couldn't really so I just created a new vector of POSIXct
+Dates <- seq(as.Date("2020-06-15"), as.Date("2020-12-04"), by="days")
+df$Date <- Dates
+df$Race <- "White" 
+White <- df
+colnames(White) <- c("Dates","Testnumber","Origin")
+
+m <- as.data.frame(matrix(0, ncol = 3, nrow = 173))
+colnames(m) <- c("Dates","Testnumber","Origin")
+rownames(m) <- c(1:173)
+
+Black <- m
+Black$Dates <- Dates
+Black$Testnumber <- runif(n = 173, min = 0, max = 500)
+Black$Origin <- "Black/African American"
+
+Native <- m
+Native$Dates <- Dates
+Native$Testnumber <- runif(n = 173, min = 0, max = 100)
+Native$Origin <- "First Nation/Native American"
+
+
+Asian <- m
+Asian$Dates <- Dates
+Asian$Testnumber <- runif(n = 173, min = 0, max = 400)
+Asian$Origin <- "Asian/Pacific Islander"
+
+test <- rbind(White,Black,Native,Asian)
+
+end.rcode-->
+
+<!--begin.rcode , message=FALSE, fig.align='center', fig.width=7, fig.height=6
+ggplot(test, aes(x=test$Dates,y=test$Testnumber,fill=test$Origin)) + geom_bar(stat="identity", position = "dodge") + 
+  labs(title="Number of tests conducted since June based on Origin", x="Date", y="Number of daily tests") +
+  theme(axis.text.x = element_text(angle=65, vjust=0.6)) + scale_fill_discrete(name="Origin",
+                                                                               breaks=c("White","Black/African American","First Nation/Native American","Asian Pacific Islander"),
+                                                                               labels=c("White","Black/African American","First Nation/Native American","Asian Pacific Islander")) 
+end.rcode-->
+
+</html>
